@@ -1,0 +1,164 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Fonte moderna e limpa */
+}
+
+body {
+    background-color: #f8fafc; /* Fundo off-white moderno */
+    color: #1e293b; /* Cinza azulado escuro, menos agressivo que o preto */
+    line-height: 1.8;
+}
+
+/* --- MENU DE NAVEGAÇÃO (GLASSMORPHISM) --- */
+nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+    color: #0f172a;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb; /* Azul Royal moderno */
+}
+
+/* --- SEÇÕES (CARDS MODERNOS) --- */
+section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 60px;
+    background: white;
+    border-radius: 24px; /* Cantos bem arredondados */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); /* Sombra muito suave */
+}
+
+h1, h2 {
+    color: #0f172a;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+h1 { font-size: 2.5rem; text-align: center; }
+h2 { font-size: 1.8rem; border-left: 5px solid #2563eb; padding-left: 15px; }
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+/* --- ESTILIZANDO A IMAGEM --- */
+img {
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Garante que não quebre no celular */
+}
+
+/* --- TRANSFORMANDO O LINK EM BOTÃO --- */
+a[target="_blank"] {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px; /* Botão pílula */
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+    margin-top: 10px;
+}
+
+a[target="_blank"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px); /* Efeito de flutuar ao passar o mouse */
+}
+
+/* --- LISTA DE ESPECIALIDADES --- */
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+li {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #334155;
+}
+#instagram a:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+/* Selecionamos o item da lista das especialidades */
+#especialidades li {
+    background-color: #f1f5f9; /* Cor original (cinza claro) */
+    transition: all 0.3s ease; /* Faz a mudança de cor ser suave, não um susto */
+    cursor: pointer; /* Transforma a seta do mouse na "mãozinha" de clique */
+}
+
+/* O efeito acontece aqui: quando o mouse passa por cima (:hover) */
+#especialidades li:hover {
+    background-color: #2563eb; /* O azul moderno que você gostou */
+    color: white; /* Muda o texto para branco para dar leitura */
+    transform: translateY(-5px); /* Faz o item dar uma subidinha de leve */
+    box-shadow: 0 10px 15px rgba(37, 99, 235, 0.2); /* Cria uma sombra azulada */
+}
+#contato a:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;}
+    .boas-vindas {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8fafc; /* Um cinza bem clarinho para destacar */
+}
+
+#texto-saudacao {
+    color: #0f172a; /* Azul marinho escuro para seriedade */
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.data-topo {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 1001; /* Maior que o 1000 do nav */
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* No celular, para não bagunçar o menu, podemos centralizar */
+@media (max-width: 600px) {
+    .data-topo {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
